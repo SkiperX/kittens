@@ -1,0 +1,80 @@
+include pug/project-settings.pug
+include pug/mixins/mixins.pug
+
+doctype html
+html
+  head(lang="ru")
+    include pug/metatags.pug
+    +title('Главная')
+    include pug/styles.pug
+  body
+
+  section.section
+    .container
+      .h2 Ты сегодня покормил кота?
+      form(action="#" method="post").portions
+        .portions__group
+
+          label.portions__label
+            input(type="checkbox" name="type1" disabled).portions__input
+            .cart
+              .cart__top
+                .cart__defoult-hover-hide Сказочное заморское яство
+                .cart__defoult-hover Котэ не одобряет?
+              .cart__title Нямушка
+              .cart__description с фуа-гра
+              .cart__bonus <span class="bold">10</span> порций
+              .cart__bonus мышь в подарок
+              .cat__weight.circle
+                .circle__num 0,5
+                .circle__text кг
+              img(src="images/kat.png" alt="").cat__img
+            .portions__text
+              .cart__defoult Чего сидишь? Порадуй котэ,
+                a(href="#").portions__link  купи.
+              .cart__selected Печень утки разварная с артишоками.
+              .cart-disabled Печалька, с фуа-гра закончился.
+        .portions__group
+
+          label.portions__label
+            input(type="checkbox" name="type2").portions__input
+            .cart
+              .cart__top
+                .cart__defoult-hover-hide Сказочное заморское яство
+                .cart__defoult-hover Котэ не одобряет?
+              .cart__title Нямушка
+              .cart__description с рыбой
+              .cart__bonus <span class="bold">40</span> порций
+              .cart__bonus <span class="bold">2</span> мыши в подарок
+              .cat__weight.circle
+                .circle__num 2
+                .circle__text кг
+              img(src="images/kat.png" alt="").cat__img
+            .portions__text
+              .cart__defoult Чего сидишь? Порадуй котэ,
+                a(href="#").portions__link  купи.
+              .cart__selected Головы щучьи с чесноком да свежайшая сёмгушка.
+              .cart-disabled Печалька, с рыбой закончился.
+        .portions__group
+
+          label.portions__label
+            input(type="checkbox" name="type3").portions__input
+            .cart
+              .cart__top
+                .cart__defoult-hover-hide Сказочное заморское яство
+                .cart__defoult-hover Котэ не одобряет?
+              .cart__title Нямушка
+              .cart__description с курой
+              .cart__bonus <span class="bold">100</span> порций
+              .cart__bonus <span class="bold">5</span> мышей в подарок
+              .cart__bonus заказчик доволен
+              .cat__weight.circle
+                .circle__num 5
+                .circle__text кг
+              img(src="images/kat.png" alt="").cat__img
+            .portions__text
+              .cart__defoult Чего сидишь? Порадуй котэ,
+                a(href="#").portions__link  купи.
+              .cart__selected Филе из цыплят с трюфелями в бульоне.
+              .cart-disabled Печалька, с курой закончился.
+  include pug/footer.pug
