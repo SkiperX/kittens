@@ -241,7 +241,7 @@
     .cart__defoult-hover-hide {
       display: none;
     }
-    .cart__defoult-hover {
+    cart__defoult-hover {
       display: block;
       color: $pink-light;
       animation-name: fadeIn;
@@ -282,6 +282,11 @@
 .cart__selected-hover,
 .cart__defoult-hover {
   display: none;
+}
+.cart__defoult-hover-hide {    
+  animation-name: fadeIn;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
 }
 @keyframes fadeIn {
   from {
